@@ -1,3 +1,5 @@
+using ToDoListApplication.Models;
+
 namespace ToDoListApplication.Migrations
 {
     using System;
@@ -14,18 +16,11 @@ namespace ToDoListApplication.Migrations
 
         protected override void Seed(ToDoListApplication.Models.ToDoListContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.ToDoListItems.AddOrUpdate(x => x.Id,
+                new ToDoListItems() { Id = 1, Text = "Wake up at 6:00 AM" },
+                new ToDoListItems() { Id = 2, Text = "Get Ready by 8:00 AM" },
+                new ToDoListItems() { Id = 3, Text = "Be at Axio by 10:30" }
+                );
         }
     }
 }
