@@ -9,5 +9,6 @@ namespace ToDoListApplication.Models
     {
         public int Id { get; set; }
         public string ToDo { get; set; }
+        public bool? IsComplete { get; set; }
     }
 }
