@@ -17,6 +17,14 @@
     cursor: pointer;
 }
 
+.done-true {
+    text-decoration: line-through;
+    color: grey;
+}
+.done-false {
+    text-decoration: none;
+}
+
 /* Remove animation */
 .my-repeat-animation.ng-leave.ng-leave-active, 
 .my-repeat-animation.ng-enter {

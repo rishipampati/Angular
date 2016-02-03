@@ -8,6 +8,7 @@
         <th>
             <a ng-click="orderByField='Id'; reverseSort = !reverseSort" class="sortable">Id</a>
         </th>
+        <th></th>
         <th>
             <a ng-click="orderByField='ToDo'; reverseSort = !reverseSort" class="sortable">ToDo</a>
         </th>
@@ -24,7 +25,9 @@
     <tbody>
     <tr ng-repeat="todo in todos | orderBy:orderByField:reverseSort" id="todo_{{todo.Id}}">
         <td>{{todo.Id}}</td>
-        <td>{{todo.ToDo}}</td>
+        <td><i ng-show="{{todo.IsComplete==true}}" class="glyphicon glyphicon-ok"></i></td>
+        <td><span class="done-{{todo.IsComplete==true}}">{{todo.ToDo}}</span></td>
+
         <td><i class="glyphicon glyphicon-remove" ng-click="delete()" title="Delete"></i>
         <a href="#/edit/{{todo.Id}}"><i class="glyphicon glyphicon-edit" title="Edit"></i></a></td>
 
