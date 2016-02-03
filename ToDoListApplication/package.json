@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "ASP.NET",
+  "private": true,
+  "devDependencies": {
+    "grun": "^0.2.0",
+    "grunt-bowercopy": "^1.2.4"
+  },
+  "engines": {
+    "node": ">=0.6"
+  }
+}
