@@ -17,9 +17,9 @@ namespace ToDoListApplication.Migrations
         protected override void Seed(ToDoListApplication.Models.ToDoListContext context)
         {
             context.ToDoListItems.AddOrUpdate(x => x.Id,
-                new ToDoListItems() { Id = 1, Text = "Wake up at 6:00 AM" },
-                new ToDoListItems() { Id = 2, Text = "Get Ready by 8:00 AM" },
-                new ToDoListItems() { Id = 3, Text = "Be at Axio by 10:30" }
+                new ToDoListItems() { Id = 1, ToDo = "Wake up at 6:00 AM" },
+                new ToDoListItems() { Id = 2, ToDo = "Get Ready by 8:00 AM" },
+                new ToDoListItems() { Id = 3, ToDo = "Be at Axio by 10:30" }
                 );
         }
     }

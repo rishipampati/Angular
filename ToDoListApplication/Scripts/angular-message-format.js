@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @license AngularJS v1.4.9
  * (c) 2010-2015 Google, Inc. http://angularjs.org
  * License: MIT
@@ -458,7 +458,7 @@ MessageFormatParser.prototype.run = function run(initialRule) {
 
 MessageFormatParser.prototype.errorInParseLogic = function errorInParseLogic() {
     throw $interpolateMinErr('logicbug',
-        'The messageformat parser has encountered an internal error.  Please file a github issue against the AngularJS project and provide this message text that triggers the bug.  Text: “{0}”',
+        'The messageformat parser has encountered an internal error.  Please file a github issue against the AngularJS project and provide this message text that triggers the bug.  ToDo: “{0}”',
         this.text);
 };
 
@@ -487,7 +487,7 @@ MessageFormatParser.prototype.errorExpecting = function errorExpecting() {
   } else {
     position = indexToLineAndColumn(this.text, this.index);
     throw $interpolateMinErr('unknarg',
-        'Unsupported keyword “{0}” at line {0}, column {1}. Only “plural” and “select” are currently supported.  Text: “{3}”',
+        'Unsupported keyword “{0}” at line {0}, column {1}. Only “plural” and “select” are currently supported.  ToDo: “{3}”',
         word, position.line, position.column, this.text);
   }
 };
@@ -636,7 +636,7 @@ MessageFormatParser.prototype.advanceInInterpolationOrMessageText = function adv
     if (match == null) {
       var position = indexToLineAndColumn(this.text, this.msgStartIndex);
       throw $interpolateMinErr('reqendbrace',
-          'The plural/select choice “{0}” message starting at line {1}, column {2} does not have an ending closing brace. Text “{3}”',
+          'The plural/select choice “{0}” message starting at line {1}, column {2} does not have an ending closing brace. ToDo “{3}”',
           this.choiceKey, position.line, position.column, this.text);
     }
   }
@@ -844,7 +844,7 @@ MessageFormatParser.prototype.ruleInAngularExpression = function ruleInAngularEx
     }
     position = indexToLineAndColumn(this.text, this.index);
     throw $interpolateMinErr('badexpr',
-        'Unexpected operator “{0}” at line {1}, column {2} in text. Was expecting “{3}”. Text: “{4}”',
+        'Unexpected operator “{0}” at line {1}, column {2} in text. Was expecting “{3}”. ToDo: “{4}”',
         operator, position.line, position.column, getEndOperator(this.angularOperatorStack[0]), this.text);
   }
   // We are trying to pop off the operator stack but there really isn't anything to pop off.

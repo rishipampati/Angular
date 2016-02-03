@@ -216,7 +216,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     var val  = $el.is('input') ? 'val' : 'html'
     var data = $el.data()
 
-    state = state + 'Text'
+    state = state + 'ToDo'
 
     if (!data.resetText) $el.data('resetText', $el[val]())
 

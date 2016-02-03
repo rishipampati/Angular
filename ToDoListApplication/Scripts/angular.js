@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @license AngularJS v1.4.9
  * (c) 2010-2015 Google, Inc. http://angularjs.org
  * License: MIT
@@ -8031,7 +8031,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             }
           }
           break;
-        case NODE_TYPE_TEXT: /* Text Node */
+        case NODE_TYPE_TEXT: /* ToDo Node */
           if (msie === 11) {
             // Workaround for #11781
             while (node.parentNode && node.nextSibling && node.nextSibling.nodeType === NODE_TYPE_TEXT) {
@@ -21579,7 +21579,7 @@ var inputType = {
    * @name input[number]
    *
    * @description
-   * Text input with number validation and transformation. Sets the `number` validation
+   * ToDo input with number validation and transformation. Sets the `number` validation
    * error if not a valid number.
    *
    * <div class="alert alert-warning">
@@ -21689,7 +21689,7 @@ var inputType = {
    * @name input[url]
    *
    * @description
-   * Text input with URL validation. Sets the `url` validation error key if the content is not a
+   * ToDo input with URL validation. Sets the `url` validation error key if the content is not a
    * valid URL.
    *
    * <div class="alert alert-warning">
@@ -21788,7 +21788,7 @@ var inputType = {
    * @name input[email]
    *
    * @description
-   * Text input with email validation. Sets the `email` validation error key if not a valid email
+   * ToDo input with email validation. Sets the `email` validation error key if not a valid email
    * address.
    *
    * <div class="alert alert-warning">
@@ -23237,7 +23237,7 @@ function classDirective(name, selector) {
       <input id="setbtn" type="button" value="set" ng-click="myVar='my-class'">
       <input id="clearbtn" type="button" value="clear" ng-click="myVar=''">
       <br>
-      <span class="base-class" ng-class="myVar">Sample Text</span>
+      <span class="base-class" ng-class="myVar">Sample ToDo</span>
      </file>
      <file name="style.css">
        .base-class {
@@ -24855,7 +24855,7 @@ var ngInitDirective = ngDirective({
  * @name ngList
  *
  * @description
- * Text input that converts between a delimited string and an array of strings. The default
+ * ToDo input that converts between a delimited string and an array of strings. The default
  * delimiter is a comma followed by a space - equivalent to `ng-list=", "`. You can specify a custom
  * delimiter as the value of the `ngList` attribute - for example, `ng-list=" | "`.
  *
@@ -28302,7 +28302,7 @@ var ngHideDirective = ['$animate', function($animate) {
         <input type="button" value="set background" ng-click="myStyle={'background-color':'blue'}">
         <input type="button" value="clear" ng-click="myStyle={}">
         <br/>
-        <span ng-style="myStyle">Sample Text</span>
+        <span ng-style="myStyle">Sample ToDo</span>
         <pre>myStyle={{myStyle}}</pre>
      </file>
      <file name="style.css">
