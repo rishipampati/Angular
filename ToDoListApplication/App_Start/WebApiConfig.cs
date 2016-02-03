@@ -19,6 +19,10 @@ namespace ToDoListApplication
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            //Renders api in json format instead of XML, esssentially make it easier to read data
+            config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(
+                config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml"));
         }
     }
 }
