@@ -8,6 +8,6 @@ namespace ToDoListApplication.Models
     public class ToDoListItems
     {
         public int Id { get; set; }
-        public string Text { get; set; }
+        public string ToDo { get; set; }
     }
 }
